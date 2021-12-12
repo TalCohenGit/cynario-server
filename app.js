@@ -30,7 +30,7 @@ app.post('/user', (req, res) => {
     const user = req.body
     console.log("user", user)
 
-    users.push(user)
+    users.push(JSON.parse(user.data))
     console.log("users", users)
     return res.send('Received a POST HTTP method');
   });
