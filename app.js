@@ -19,7 +19,6 @@ const users = [
     { date:"2015-02-10", name: "Dani", address: "Hertzel 60 PT" },
     { date: "2013-03-03", name: "Yossi", address: "Hertzel 40 TA" }
   ]
-const port = 4000;
 
 app.use(bodyParser.json());
 
