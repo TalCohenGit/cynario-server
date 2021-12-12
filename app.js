@@ -37,6 +37,6 @@ app.post('/user', (req, res) => {
 
 
   app.listen(process.env.PORT || 5000,() =>
-  console.log(`Example app listening on port ${port}!`),)
+  console.log(`Example app listening on port 5000!`),)
 
 
