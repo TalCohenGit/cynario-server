@@ -1,19 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser');
-const http = require('http');
 const cors = require('cors');
 
 const app = express();
 
-app.use(cors({"Access-Control-Allow-Origin": "",
-
-}));
-
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.use(cors());
 
 const users = [
     { date:"2015-02-10", name: "Dani", address: "Hertzel 60 PT" },
@@ -28,10 +19,7 @@ app.get('/users', (req, res) => {
   
 app.post('/user', (req, res) => {
     const user = req.body
-    console.log("user", user)
-
     users.push(JSON.parse(user.data))
-    console.log("users", users)
     return res.send('Received a POST HTTP method');
   });
 
