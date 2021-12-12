@@ -36,7 +36,8 @@ app.post('/user', (req, res) => {
     return res.send('Received a POST HTTP method');
   });
 
-app.listen(port, () =>
-  console.log(`Example app listening on port ${port}!`),
-);
+
+  app.listen(process.env.PORT || 5000,() =>
+  console.log(`Example app listening on port ${port}!`),)
+
 
